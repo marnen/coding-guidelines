@@ -18,3 +18,8 @@ Note in particular that Java-style lowerCamelCase is never used.
 
 Also, note that the list above doesn't mention global variables. In properly written Ruby code, these are almost never necessary, but one legitimate use for them is to store global configuration values.  When they are used this way, I like to give them `$UNDERSCORED_CAPITAL` names, to emphasize their affinity with constants.
 
+## Spacing
+
+### Indentation
+
+Use two-space indents, no tabs.
