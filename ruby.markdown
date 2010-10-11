@@ -14,7 +14,7 @@ Within these constraints, however, there is room for interpretation. The common 
 * `ClassName` (UpperCamelCase)
 * `OTHER_CONSTANTS` (all caps with underscores)
 
-Note in particular that Java-style lowerCamelCase is never used.
+Note in particular that Java-style lowerCamelCase is never used. The examples in <cite>Programming Ruby</cite> (the "Pickaxe Book") do use it, but this is to be considered an aberration, or perhaps a holdover from an earlier era of Ruby development. In 2010, the Ruby standard library and most other major libraries (including Rails) follow the casing rules I have outlined above, so it makes sense for new Ruby code to follow suit.
 
 Also, note that the list above doesn't mention global variables. In properly written Ruby code, these are almost never necessary (with the exception of certain Perlisms such as `$_` and the match variables `$1`, `$2`...), but one legitimate use for them is to store global configuration values.  When they are used this way, I like to give them `$UNDERSCORED_CAPITAL` names, to emphasize their affinity with constants.
 
