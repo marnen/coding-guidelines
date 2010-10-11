@@ -30,4 +30,4 @@ Use two-space indents, no tabs.
 
 *One space* after *commas and semicolons*, none before.
 
-*_No_ space* around *parentheses*, *square brackets*, or *braces* when used for Hashes. (For block braces, see below.)
+*__No__ space* around *parentheses*, *square brackets*, or *braces* when used for Hashes. (For block braces, see below.)
