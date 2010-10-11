@@ -16,7 +16,7 @@ Within these constraints, however, there is room for interpretation. The common 
 
 Note in particular that Java-style lowerCamelCase is never used.
 
-Also, note that the list above doesn't mention global variables. In properly written Ruby code, these are almost never necessary, but one legitimate use for them is to store global configuration values.  When they are used this way, I like to give them `$UNDERSCORED_CAPITAL` names, to emphasize their affinity with constants.
+Also, note that the list above doesn't mention global variables. In properly written Ruby code, these are almost never necessary (with the exception of certain Perlisms such as `$_` and the match variables `$1`, `$2`...), but one legitimate use for them is to store global configuration values.  When they are used this way, I like to give them `$UNDERSCORED_CAPITAL` names, to emphasize their affinity with constants.
 
 ## Spacing
 
