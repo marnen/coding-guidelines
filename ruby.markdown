@@ -23,3 +23,11 @@ Also, note that the list above doesn't mention global variables. In properly wri
 ### Indentation
 
 Use two-space indents, no tabs.
+
+### Punctuation marks
+
+*One space* on each side of *operators*, except `.` (if that's an operator!), which needs no space.
+
+*One space* after *commas and semicolons*, none before.
+
+*_No_ space* around *parentheses*, *square brackets*, or *braces* when used for Hashes. (For block braces, see below.)
