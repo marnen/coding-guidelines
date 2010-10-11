@@ -26,8 +26,8 @@ Use two-space indents, no tabs.
 
 ### Punctuation marks
 
-*One space* on each side of *operators*, except `.` (if that's an operator!), which needs no space.
+**One space** on each side of **operators**, except `.` (if that's an operator!), which needs no space.
 
-*One space* after *commas and semicolons*, none before.
+**One space** after **commas and semicolons**, none before.
 
-*__No__ space* around *parentheses*, *square brackets*, or *braces* when used for Hashes. (For block braces, see below.)
+**_No_ space** around **parentheses**, **square brackets**, or **braces** when used for Hashes. (For block braces, see below.)
