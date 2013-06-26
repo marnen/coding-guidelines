@@ -100,6 +100,6 @@ Use double-quoted strings for the following cases:
 
 Prefer single-quoted strings elsewhere.
 
-Note that if a string contains lots of single and double quotes, it is often clearer to use the generic quoting constructs (`%q` and `%Q`).
+Note that if a string contains lots of single and double quotes and newlines, it is often clearer to use the generic quoting constructs (`%q` and `%Q`) or a heredoc.
 
 String interpolation is usually more readable than `+` concatenation, and creates fewer `String` objects, so `full_name = "#{first_name} #{last_name}"` is generally preferable to `full_name = first_name + ' ' + last_name`. (Actually, in this case, `Array#join` is probably better than either of these.)
