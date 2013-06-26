@@ -30,9 +30,56 @@ Use two-space indents, no tabs.
 
 **One space** after **commas and semicolons**, none before.
 
-**_No_ space** around **parentheses**, **square brackets**, or **braces** when used for Hashes. (For block braces, see below.)
+**_No_ space** around **parentheses**, **square brackets**, or **braces** when used for Hashes. (For block braces, see [below](#blocks).)
 
 ## Code style
+
+### Blocks
+
+Ruby has two equivalent notations for blocks: `do`...`end` and `{`...`}`. It is pretty well established in the Ruby community that `do` is used for multiline blocks, while braces are used if the block fits on a single line:
+
+```ruby
+[1, 2, 3].each do |n|
+  puts n
+end
+```
+but
+```ruby
+[1, 2, 3].each {|n| puts n }
+```
+
+In practice, for a short block as in this example, the inline syntax is usually preferable. Multiline blocks should be used where there are multiple statements in the block, or where the single statement is long, complex, or otherwise easier to read on its own line.
+
+For block braces, I like the following spacing (and I'm well aware that no two Ruby developers agree on this!):
+
+**One space** before the opening brace.
+
+**One space** after the block arguments, if present.
+
+**One space** before the closing brace.
+
+**One space** after the closing brace, unless the next character is a `.` for a method call.
+
+Examples:
+
+```ruby
+3.times { puts 'Hello' }
+```
+
+```ruby
+3.times {|i| puts i }
+```
+
+```ruby
+[1, 2, 3].map {|n| n * 10 }.inspect
+```
+
+```ruby
+[1, 2, 3].map do |n| # no braces here
+  puts "Processing #{n}"
+  n * 10
+end
+```
 
 ### Boolean operations
 
