@@ -93,12 +93,12 @@ Ruby has two sets of Boolean operators: `&&`/`||` and `and`/`or`; the latter has
 
 Ruby has two primary quoting syntaxes for strings -- single and double quotes. Single-quoted strings do not interpolate variables or interpret backslash escape sequences other than `\'` and `\\`. Therefore, they are safer and probably (marginally) less processor-intensive.
 
-Use double-quoted strings for the following cases:
-* Strings containing interpolated variables
-* Strings containing backslash sequences that single-quoted strings don't process
-* Strings already containing single quotes
+Use double quotes if the string contains any of the following:
+* Interpolated variables
+* Backslash sequences that single-quoted strings don't process
+* Literal single quotes
 
-Prefer single-quoted strings elsewhere.
+Prefer single quotes elsewhere.
 
 Note that if a string contains lots of single and double quotes and newlines, it is often clearer to use the generic quoting constructs (`%q` and `%Q`) or a heredoc.
 
