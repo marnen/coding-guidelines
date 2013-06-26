@@ -37,3 +37,7 @@ Use two-space indents, no tabs.
 ### Boolean operations
 
 Ruby has two sets of Boolean operators: `&&`/`||` and `and`/`or`; the latter has lower precedence, as in Perl. Some style guides (like that of Rails) suggest that the latter only be used for flow control (e.g. `redirect_to :show and return`), and prefer the former set in all other cases. I disagree with this recommendation: to me, there is a lot of value in being able to write `if x > 5 and y < 3`, and the low precedence of `and` and `or` means I have fewer worries about parentheses (though in this case it doesn't actually make a difference). However, I wouldn't go much more complex than this: I think `if (x > 5 and y < 3) or z == 2` starts to be perhaps a little less readable than `if (x > 5 && y < 3) || z == 2` (note that while the parentheses are not strictly necessary in the last example, it's incomprehensible without them).
+
+### Conditionals
+
+`unless x` is equivalent to `if !x`, and `until x` is equivalent to `while !x`. Therefore, use whichever form is clearer. Generally, that means using `unless`/`until` for simple negative conditions, and `if`/`while` in all other cases, including complex negatives. That is, `unless color == :blue` is probably preferable to `if color != :blue`, but `unless color == :blue and vertices > 4` requires too much complex mental gymnastics to figure out which negation affects what, so `if color != :blue or vertices <= 4` is better in this case.
