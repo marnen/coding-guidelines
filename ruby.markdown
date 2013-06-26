@@ -88,3 +88,18 @@ Ruby has two sets of Boolean operators: `&&`/`||` and `and`/`or`; the latter has
 ### Conditionals
 
 `unless x` is equivalent to `if !x`, and `until x` is equivalent to `while !x`. Therefore, use whichever form is clearer. Generally, that means using `unless`/`until` for simple negative conditions, and `if`/`while` in all other cases, including complex negatives. That is, `unless color == :blue` is probably preferable to `if color != :blue`, but `unless color == :blue and vertices > 4` requires too much complex mental gymnastics to figure out which negation affects what, so `if color != :blue or vertices <= 4` is better in this case.
+
+### Strings
+
+Ruby has two primary quoting syntaxes for strings -- single and double quotes. Single-quoted strings do not interpolate variables or interpret backslash escape sequences other than `\'` and `\\`. Therefore, they are safer and probably (marginally) less processor-intensive.
+
+Use double-quoted strings for the following cases:
+* Strings containing interpolated variables
+* Strings containing backslash sequences that single-quoted strings don't process
+* Strings already containing single quotes
+
+Prefer single-quoted strings elsewhere.
+
+Note that if a string contains lots of single and double quotes, it is often clearer to use the generic quoting constructs (`%q` and `%Q`).
+
+String interpolation is usually more readable than `+` concatenation, and creates fewer `String` objects, so `full_name = "#{first_name} #{last_name}"` is generally preferable to `full_name = first_name + ' ' + last_name`. (Actually, in this case, `Array#join` is probably better than either of these.)
